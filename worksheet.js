@@ -154,3 +154,29 @@ function titleCase(stringPassedIn){
 //test
 let exampleString = "Hello, i am a sTRing"
 console.log(titleCase(exampleString))
+
+// Compress a string of characters
+// a. For example, an input of "aaabbbbbccccaacccbbbaaabbbaaa" would 
+// compress to "3a5b4c2a3c3b3a3b3a"
+
+// Problem as I understand it:
+// given a string of characters with possible repetition, compress -> leading count following char
+// store in new string, return string
+function compressString(theString){
+    theString += " "
+    let returnString = ""
+    let counter = 1
+    for(let i = 0; i < theString.length - 1; i++){
+        if(theString[i] == theString[i + 1]){
+            counter++
+        }
+        else{
+            returnString += counter.toString() + theString[i]
+            counter = 1
+        }
+    }
+    return returnString
+}
+
+//test
+console.log(compressString("jjjjjjjjkkkoooooooojjjjjjtttttrr"))
