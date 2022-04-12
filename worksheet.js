@@ -180,3 +180,29 @@ function compressString(theString){
 
 //test
 console.log(compressString("jjjjjjjjkkkoooooooojjjjjjtttttrr"))
+
+// BONUS CHALLENGE: Palindrome
+// a. A word, phrase, or sequence that reads the same backward as forward 
+// i.e. madam
+// b. Write code that takes a user input and checks to see if it is a 
+// Palindrome and reports the result
+
+// Problem as I understand it:
+// get user input and check to see if it is a palindrome
+// prints true if it is, false otherwise
+// incorporate reverseString
+
+function isPalindrome(){
+    let inputString = prompt("Please enter a word, phrase, or sequence to determine if it is a Palindrome: ")
+    let inputStringLower = inputString.toLowerCase()
+    let reversedString = reverseString(inputStringLower)
+    if(inputStringLower == reversedString){
+        return `${inputString} is a Palindrome.`
+    }
+    else{
+        return `${inputString} is not a Palindrome`
+    }
+}
+
+//test
+console.log(isPalindrome())
