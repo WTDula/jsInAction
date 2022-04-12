@@ -136,3 +136,21 @@ function reverseString(stringPassedIn){
 // test
 let thisString = "Hello I am wakka wakka"
 console.log(reverseString(thisString))
+
+// Capitalize letter
+//    a. Write code that takes a string as input and capitalize the first letter of each word. 
+//        Words will be separated by only one space. i.e. “hello world” should be outputted as “Hello World”
+
+// To solve this problem, I would split the string at the space character, then I can loop through each substring and capitalize
+// the first letter of each word.  finally, i can recombine the substrings back into the normal string and return that
+function titleCase(stringPassedIn){
+    stringPassedIn = stringPassedIn.toLowerCase().split(' ')
+    for(let i = 0; i < stringPassedIn.length; i++){
+        stringPassedIn[i] = stringPassedIn[i].charAt(0).toUpperCase() + stringPassedIn[i].slice(1)
+    }
+    return stringPassedIn.join(' ')
+}
+
+//test
+let exampleString = "Hello, i am a sTRing"
+console.log(titleCase(exampleString))
