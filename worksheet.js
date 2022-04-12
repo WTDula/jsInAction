@@ -86,3 +86,9 @@
 
 // Arrays
 
+let desktopItems = ["chair", "tv", "remote"]
+console.log(desktopItems[1])
+desktopItems.push("Infinity Gauntlet")
+for(let i = 0; i < desktopItems.length; i++){
+    console.log(desktopItems[i])
+}
